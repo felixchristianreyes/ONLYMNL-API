@@ -15,9 +15,10 @@ return new class extends Migration
     {
         Schema::create('markers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('lat');
             $table->string('lng');
+            $table->string('type');
+            $table->string('address');
             $table->timestamps();
         });
     }

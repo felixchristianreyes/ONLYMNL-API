@@ -10,8 +10,9 @@ class Markers extends Model
     use HasFactory;
     protected $table = 'markers';
     protected $fillable = [
-        'name',
         'lat',
         'lng',
+        'type',
+        'address'
     ];
 }

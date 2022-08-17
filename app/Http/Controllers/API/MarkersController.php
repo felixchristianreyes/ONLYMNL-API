@@ -20,9 +20,10 @@ class MarkersController extends Controller
     public function store(Request $request)
     {
         $marker = new Markers;
-        $marker->name = $request->input('name');
         $marker->lat = $request->input('lat');
         $marker->lng = $request->input('lng');
+        $marker->type = $request->input('type');
+        $marker->address = $request->input('address');
         $marker->save();
 
         return response()->json([
